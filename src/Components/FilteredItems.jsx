@@ -1,12 +1,17 @@
 import { useRef } from "react";
 
-const FilteredItems = () => {
+const FilteredItems = ({filterData}) => {
     const filteritems = useRef();
-    console.log(filteritems.current);
+
+    const postOffice = (event) => {
+        const filterItem = filteritems.current.value;
+        filterData(filterItem);
+    }
+    
     return<>
     <div>
         <input type="text" ref={filteritems}/>
-        <button>🔍</button>
+        <button onClick={postOffice}>🔍</button>
     </div>
     </>
 }
