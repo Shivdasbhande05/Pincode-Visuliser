@@ -22,7 +22,6 @@ function App() {
       (data) => data.Name.toLowerCase() === postOffice.toLowerCase()
     );
 
-    setPincode(filterPost);
   };
 
   return (
