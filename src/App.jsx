@@ -21,7 +21,8 @@ function App() {
     let filterPost = newPincode[0].PostOffice.filter(
       (data) => data.Name.toLowerCase() === postOffice.toLowerCase()
     );
-    
+
+    setPincode(filterPost);
   };
 
   return (
